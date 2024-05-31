@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DummyData generator</title>
+</head>
+<body>
+    <div class="content">
+
+    </div>
+    <div id="button1">
+        <button>Generate Data To DB</button>
+    </div>
+    <!-- <div id="button2">
+        <button>Delete Data From DB</button>
+    </div> -->
+    <script>
+        const d = document.getElementById("#button1 button")
+        d.addEventListener('click',async()=>{
+            let a = await fetch("/generate")
+            let r = await a.json()
+            console.log(r)
+        })
+    </script>
+</body>
+</html>
